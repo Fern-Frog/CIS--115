@@ -10,7 +10,7 @@ public class M5HW1_Schwab
     {
         String again = "yes";
 
-        while (again.equalsIgnoreCase("yes")); 
+        while (again.equalsIgnoreCase("yes")) 
         {
 
         double average = 90;
