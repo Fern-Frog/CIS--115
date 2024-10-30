@@ -1,24 +1,29 @@
-
 /**
+ * Alta Schwab
  * M5HW1_Schwab
+ * 28/10/2024
+ * updated grade calculator with loops
  */
 import java.util.Scanner;
 public class M5HW1_Schwab 
 
 {
+
     public static void main(String[] args)
     {
         String again = "yes";
-
-        while (again.equalsIgnoreCase("yes")) 
+        while (again.equalsIgnoreCase("yes"))
         {
+
+
 
         double average = 90;
         char grade;
         Scanner k = new Scanner(System.in);
 
 
-        int num_grades, count = 1, grade_num, sum = 0; 
+        int num_grades, count = 1, grade_num; 
+        double sum = 0;
 
         System.out.print("How many grades would you like to be average? ");
         num_grades = k.nextInt();
@@ -29,15 +34,19 @@ public class M5HW1_Schwab
             grade_num = k.nextInt();
                 while ( grade_num < 0 || grade_num > 100)
                 {
-                    System.out.println("Invalid grade");
+                    System.out.println("Invalid grade. No grade should be less than zero or greater than 100");
                     System.out.print("Reenter grade: ");
                     grade_num = k.nextInt();
-                }
+
+                }  
+
+
             sum += grade_num; 
             count++; 
 
 
-        } while (count <= num_grades);
+        }
+         while (count <= num_grades);
 
         average = sum / num_grades;
 
@@ -67,7 +76,8 @@ public class M5HW1_Schwab
 
             System.out.print("Would you like to run this program again? Enter yes or no: ");
             again = k.next();
+        }
+        System.out.println("Program has exited");
     }
-    System.out.println("Program has exited");
-}
+
 }
