@@ -13,8 +13,10 @@ public class CW1118_Funtioncn_grade
         number = getNumGrades(k);
         total = getTotal(k, number);
         avergae = getAvergae(number, total);
-        displayValue(number, total, avergae);
+        char letterGrade = getLetterGrade(avergae);
 
+
+        displayValue(number, total, avergae, letterGrade);
 
         k.close();
 
@@ -52,11 +54,43 @@ public class CW1118_Funtioncn_grade
         return tot / num;
     }
 
-    public static void displayValue(int num, int total, double average)
+    public static void displayValue(int num, int total, double average, char letterGrade)
     {
+        System.out.println("");
         System.out.println("Number of grades is " + num);
+        System.out.println("");
         System.out.println("Total of grades is " + total);
+        System.out.println("");
         System.out.println("Average of grades is " + average);
+        System.out.println("");
+        System.out.println("Letter grade " + letterGrade);
+        System.out.println("");
+    }
+    public static char getLetterGrade(double average)
+    {
+        char grade; 
+        if (average >= 90 && average <= 100)
+        {
+            grade = 'A'; 
+        }
+        else if (average >=80)
+        {
+            grade = 'B';
+        }
+        else if (average >=70)
+        {
+            grade = 'C';
+        }
+        else if(average >=60)
+        {
+            grade = 'D'; 
+        }
+        else
+        {
+            grade = 'F';
+        }
+        System.out.println("Grade is " + grade);
 
+        return grade;
     }
 }

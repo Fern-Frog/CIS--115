@@ -15,8 +15,6 @@ public class M5HW1_Schwab
         while (again.equalsIgnoreCase("yes"))
         {
 
-
-
         double average = 90;
         char grade;
         Scanner k = new Scanner(System.in);
